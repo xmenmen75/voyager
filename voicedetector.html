@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>文書のタイトル</title>
+
+<style type="text/css">
+
+
+.select-box {
+  background: #FFFDF4;
+  /*border: 2px solid #D2BA85;
+  border-radius: 5px;*/
+  border: 0px;
+  color: #0C2245;
+  font-size: 14px;
+  height: 30px;
+  line-height: 30px;
+  text-align: left;
+  text-indent: 5px;
+  vertical-align: middle;
+  width: 240px;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+cursor:crosshair;
+}
+
+
+</style>
+
+</head>
+<body>
+
+<div>
+  <script type="text/javascript">
+  var count = 0;
+  var str_all = [" ",
+"(渡辺)Netadashi Meetupの準備状況確認を行います。",
+"畠中さん、募集状況どうなってます?",
+"(畠中)来週先生に相談させてもらって、学生に声掛けする予定です。",
+"おそらく4-5名ほど呼べると思います。",
+'(渡辺)いいね! 引き続き <select class="select-box" style="display: inline;background: #f4bbff;border: 0px;font-size: 14px;height: 26px;-webkit-appearance:none;-moz-appearance:none;appearance:none;cursor:crosshair;width: 70px;text-indent: 5px;"><option>よろし苦</option><option>よろしく</option><option>寄ろ市区</option><option>よしーー</option></select>  ',
+"。蒋さんは状況どうなってます?",
+"(蒋)あ、すみません。その件、何も動けてないです。",
+"別プロジェクトの資料作成が忙しくて。",
+"(渡辺)あー、あのプロジェクトね。",
+"まぁ、しょうがないか。いつ頃、募集メール出せそう?",
+"(蒋)今週中には、",
+'(渡辺)OK! よろしくぅ。そう言えば、',
+'<select class="select-box" style="display: inline;background: #ff6347;border: 0px;font-size: 14px;height: 26px;-webkit-appearance:none;-moz-appearance:none;appearance:none;cursor:crosshair;width: 100px;text-indent: 5px;"><option>面接ション</option><option>メインセッション</option><option>メイン説しょん</option><option>メンション</option></select> ',
+'のアサインってできてる?',
+'<font style = "background-color: #ffd700"> NRI </font> さんと <font style = "background-color: #ffd700">cinnamon </font>さんにメール出します。',
+'<font style = "background-color: #ffd700">auto-calibration = 2 </font> <br> <font style = "background-color: #f4bbff">correct manually = 1(Probabity under 80%)</font><br><font style = "background-color: #ff6347">correct manually = 1(Probabity under 65%)</font><br>'
+];
+
+  var countup = function(){
+    
+    //document.write(count);
+    var id = setTimeout(countup, 1000);
+    document.write(str_all[count]);
+    
+    if(count ==2 || count == 4 || count == 6 || count == 8 || count == 10 || count == 14){document.write("<br>");}
+
+    count++;
+
+    if(count ==16){document.write("<br><br><br><br><br><br>");}
+
+    if(count > 16){　
+      clearTimeout(id);　//idをclearTimeoutで指定している
+    }
+
+  }
+  countup();
+
+  </script>
+</div>
+
+</body>
+</html>
